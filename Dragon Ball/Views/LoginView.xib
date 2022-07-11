@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="Dragon_Ball" customModuleProvider="target">
+            <connections>
+                <outlet property="passwordLabel" destination="891-MC-4vr" id="rcQ-9H-bX4"/>
+                <outlet property="usernameLabel" destination="or9-Xo-dgx" id="Q9y-da-wet"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondo2" translatesAutoresizingMaskIntoConstraints="NO" id="75O-cb-aYe">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </imageView>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="or9-Xo-dgx">
+                    <rect key="frame" x="107" y="357" width="200" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="891-MC-4vr">
+                    <rect key="frame" x="107" y="431" width="200" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="B1J-EO-G9I"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hf2-1F-zNj">
+                    <rect key="frame" x="147" y="525" width="120" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="120" id="VaB-e4-rPK"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="ENTRAR"/>
+                    <connections>
+                        <action selector="OnButtonTap:" destination="-1" eventType="touchUpInside" id="HJo-kU-WQ3"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="or9-Xo-dgx" firstAttribute="centerX" secondItem="891-MC-4vr" secondAttribute="centerX" id="1Sj-Xo-HGc"/>
+                <constraint firstItem="or9-Xo-dgx" firstAttribute="leading" secondItem="891-MC-4vr" secondAttribute="leading" id="3QA-1g-suU"/>
+                <constraint firstItem="891-MC-4vr" firstAttribute="top" secondItem="or9-Xo-dgx" secondAttribute="bottom" constant="40" id="7bW-UA-mNy"/>
+                <constraint firstItem="Hf2-1F-zNj" firstAttribute="centerX" secondItem="891-MC-4vr" secondAttribute="centerX" id="ET2-Gs-3QN"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="75O-cb-aYe" secondAttribute="trailing" id="Ssz-84-ix8"/>
+                <constraint firstAttribute="bottom" secondItem="75O-cb-aYe" secondAttribute="bottom" id="XK8-fD-ocw"/>
+                <constraint firstItem="891-MC-4vr" firstAttribute="centerY" secondItem="75O-cb-aYe" secondAttribute="centerY" id="pqg-87-3bX"/>
+                <constraint firstItem="75O-cb-aYe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="qmi-iD-zIP"/>
+                <constraint firstItem="or9-Xo-dgx" firstAttribute="trailing" secondItem="891-MC-4vr" secondAttribute="trailing" id="rzo-Pz-gzq"/>
+                <constraint firstItem="75O-cb-aYe" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="tx6-1g-JpU"/>
+                <constraint firstItem="891-MC-4vr" firstAttribute="centerX" secondItem="75O-cb-aYe" secondAttribute="centerX" id="vtg-3J-sph"/>
+                <constraint firstItem="Hf2-1F-zNj" firstAttribute="top" secondItem="891-MC-4vr" secondAttribute="bottom" constant="60" id="zJZ-y6-4fV"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="113.83928571428571"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="fondo2" width="1080" height="1920"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

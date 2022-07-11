@@ -7,15 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2670B15F2876C89F00AD510B /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2670B15D2876C89F00AD510B /* TableViewCell.swift */; };
+		2670B1602876C89F00AD510B /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2670B15E2876C89F00AD510B /* TableViewCell.xib */; };
+		2688A14E287B385900DB8BD3 /* CharactersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2688A14C287B385900DB8BD3 /* CharactersTableViewController.swift */; };
+		2688A14F287B385900DB8BD3 /* CharactersTable.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2688A14D287B385900DB8BD3 /* CharactersTable.xib */; };
+		2688A156287B490D00DB8BD3 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2688A154287B490D00DB8BD3 /* TabBarViewController.swift */; };
+		2688A157287B490D00DB8BD3 /* TabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2688A155287B490D00DB8BD3 /* TabBarViewController.xib */; };
+		2688A15A287B4C2800DB8BD3 /* CharactersCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2688A158287B4C2800DB8BD3 /* CharactersCollectionViewController.swift */; };
+		2688A15B287B4C2800DB8BD3 /* CharactersCollection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2688A159287B4C2800DB8BD3 /* CharactersCollection.xib */; };
+		2688A15E287B4C9400DB8BD3 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2688A15C287B4C9400DB8BD3 /* CollectionViewCell.swift */; };
+		2688A15F287B4C9400DB8BD3 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2688A15D287B4C9400DB8BD3 /* CollectionViewCell.xib */; };
 		268CADA22875C403001DA00E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268CADA12875C403001DA00E /* AppDelegate.swift */; };
 		268CADA42875C403001DA00E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268CADA32875C403001DA00E /* SceneDelegate.swift */; };
-		268CADA62875C403001DA00E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268CADA52875C403001DA00E /* ViewController.swift */; };
-		268CADA92875C403001DA00E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 268CADA72875C403001DA00E /* Main.storyboard */; };
 		268CADAB2875C405001DA00E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 268CADAA2875C405001DA00E /* Assets.xcassets */; };
 		268CADAE2875C405001DA00E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 268CADAC2875C405001DA00E /* LaunchScreen.storyboard */; };
 		268CADB92875C405001DA00E /* Dragon_BallTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268CADB82875C405001DA00E /* Dragon_BallTests.swift */; };
 		268CADC32875C406001DA00E /* Dragon_BallUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268CADC22875C406001DA00E /* Dragon_BallUITests.swift */; };
 		268CADC52875C406001DA00E /* Dragon_BallUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268CADC42875C406001DA00E /* Dragon_BallUITestsLaunchTests.swift */; };
+		268CADD62875C49F001DA00E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268CADD42875C49F001DA00E /* LoginViewController.swift */; };
+		268CADD72875C49F001DA00E /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 268CADD52875C49F001DA00E /* LoginView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,11 +46,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2670B15D2876C89F00AD510B /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		2670B15E2876C89F00AD510B /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		2688A14C287B385900DB8BD3 /* CharactersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersTableViewController.swift; sourceTree = "<group>"; };
+		2688A14D287B385900DB8BD3 /* CharactersTable.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharactersTable.xib; sourceTree = "<group>"; };
+		2688A154287B490D00DB8BD3 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		2688A155287B490D00DB8BD3 /* TabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabBarViewController.xib; sourceTree = "<group>"; };
+		2688A158287B4C2800DB8BD3 /* CharactersCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersCollectionViewController.swift; sourceTree = "<group>"; };
+		2688A159287B4C2800DB8BD3 /* CharactersCollection.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharactersCollection.xib; sourceTree = "<group>"; };
+		2688A15C287B4C9400DB8BD3 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		2688A15D287B4C9400DB8BD3 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		268CAD9E2875C403001DA00E /* Dragon Ball.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dragon Ball.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		268CADA12875C403001DA00E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		268CADA32875C403001DA00E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		268CADA52875C403001DA00E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		268CADA82875C403001DA00E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		268CADAA2875C405001DA00E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		268CADAD2875C405001DA00E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		268CADAF2875C405001DA00E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +67,8 @@
 		268CADBE2875C406001DA00E /* Dragon BallUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dragon BallUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		268CADC22875C406001DA00E /* Dragon_BallUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dragon_BallUITests.swift; sourceTree = "<group>"; };
 		268CADC42875C406001DA00E /* Dragon_BallUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dragon_BallUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		268CADD42875C49F001DA00E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		268CADD52875C49F001DA00E /* LoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +119,11 @@
 		268CADA02875C403001DA00E /* Dragon Ball */ = {
 			isa = PBXGroup;
 			children = (
+				268CADD22875C42B001DA00E /* Views */,
+				268CADD12875C421001DA00E /* Models */,
+				268CADD32875C439001DA00E /* Controllers */,
 				268CADA12875C403001DA00E /* AppDelegate.swift */,
 				268CADA32875C403001DA00E /* SceneDelegate.swift */,
-				268CADA52875C403001DA00E /* ViewController.swift */,
-				268CADA72875C403001DA00E /* Main.storyboard */,
 				268CADAA2875C405001DA00E /* Assets.xcassets */,
 				268CADAC2875C405001DA00E /* LaunchScreen.storyboard */,
 				268CADAF2875C405001DA00E /* Info.plist */,
@@ -125,6 +146,39 @@
 				268CADC42875C406001DA00E /* Dragon_BallUITestsLaunchTests.swift */,
 			);
 			path = "Dragon BallUITests";
+			sourceTree = "<group>";
+		};
+		268CADD12875C421001DA00E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		268CADD22875C42B001DA00E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				268CADD52875C49F001DA00E /* LoginView.xib */,
+				2688A155287B490D00DB8BD3 /* TabBarViewController.xib */,
+				2688A14D287B385900DB8BD3 /* CharactersTable.xib */,
+				2688A159287B4C2800DB8BD3 /* CharactersCollection.xib */,
+				2670B15E2876C89F00AD510B /* TableViewCell.xib */,
+				2688A15D287B4C9400DB8BD3 /* CollectionViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		268CADD32875C439001DA00E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				268CADD42875C49F001DA00E /* LoginViewController.swift */,
+				2688A154287B490D00DB8BD3 /* TabBarViewController.swift */,
+				2688A14C287B385900DB8BD3 /* CharactersTableViewController.swift */,
+				2688A158287B4C2800DB8BD3 /* CharactersCollectionViewController.swift */,
+				2670B15D2876C89F00AD510B /* TableViewCell.swift */,
+				2688A15C287B4C9400DB8BD3 /* CollectionViewCell.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,9 +285,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2670B1602876C89F00AD510B /* TableViewCell.xib in Resources */,
 				268CADAE2875C405001DA00E /* LaunchScreen.storyboard in Resources */,
+				2688A15B287B4C2800DB8BD3 /* CharactersCollection.xib in Resources */,
 				268CADAB2875C405001DA00E /* Assets.xcassets in Resources */,
-				268CADA92875C403001DA00E /* Main.storyboard in Resources */,
+				2688A14F287B385900DB8BD3 /* CharactersTable.xib in Resources */,
+				2688A157287B490D00DB8BD3 /* TabBarViewController.xib in Resources */,
+				2688A15F287B4C9400DB8BD3 /* CollectionViewCell.xib in Resources */,
+				268CADD72875C49F001DA00E /* LoginView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,8 +317,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				268CADA62875C403001DA00E /* ViewController.swift in Sources */,
+				2670B15F2876C89F00AD510B /* TableViewCell.swift in Sources */,
+				2688A14E287B385900DB8BD3 /* CharactersTableViewController.swift in Sources */,
+				2688A15E287B4C9400DB8BD3 /* CollectionViewCell.swift in Sources */,
+				268CADD62875C49F001DA00E /* LoginViewController.swift in Sources */,
 				268CADA22875C403001DA00E /* AppDelegate.swift in Sources */,
+				2688A15A287B4C2800DB8BD3 /* CharactersCollectionViewController.swift in Sources */,
+				2688A156287B490D00DB8BD3 /* TabBarViewController.swift in Sources */,
 				268CADA42875C403001DA00E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,14 +361,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		268CADA72875C403001DA00E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				268CADA82875C403001DA00E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		268CADAC2875C405001DA00E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -442,7 +498,6 @@
 				INFOPLIST_FILE = "Dragon Ball/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -470,7 +525,6 @@
 				INFOPLIST_FILE = "Dragon Ball/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
