@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="Dragon_Ball" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="pHn-CI-4QB" id="pLe-cd-69f"/>
+                <outlet property="loginButton" destination="Hf2-1F-zNj" id="Pz7-Az-SHO"/>
                 <outlet property="passwordLabel" destination="891-MC-4vr" id="rcQ-9H-bX4"/>
                 <outlet property="usernameLabel" destination="or9-Xo-dgx" id="Q9y-da-wet"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -20,13 +22,13 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondo2" translatesAutoresizingMaskIntoConstraints="NO" id="75O-cb-aYe">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gokuBack" translatesAutoresizingMaskIntoConstraints="NO" id="75O-cb-aYe">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                 </imageView>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="or9-Xo-dgx">
                     <rect key="frame" x="107" y="357" width="200" height="34"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next"/>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="891-MC-4vr">
                     <rect key="frame" x="107" y="431" width="200" height="34"/>
@@ -47,12 +49,17 @@
                         <action selector="OnButtonTap:" destination="-1" eventType="touchUpInside" id="HJo-kU-WQ3"/>
                     </connections>
                 </button>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="pHn-CI-4QB">
+                    <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                    <color key="color" systemColor="labelColor"/>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="or9-Xo-dgx" firstAttribute="centerX" secondItem="891-MC-4vr" secondAttribute="centerX" id="1Sj-Xo-HGc"/>
                 <constraint firstItem="or9-Xo-dgx" firstAttribute="leading" secondItem="891-MC-4vr" secondAttribute="leading" id="3QA-1g-suU"/>
+                <constraint firstItem="pHn-CI-4QB" firstAttribute="centerX" secondItem="75O-cb-aYe" secondAttribute="centerX" id="4Kl-AL-lsc"/>
                 <constraint firstItem="891-MC-4vr" firstAttribute="top" secondItem="or9-Xo-dgx" secondAttribute="bottom" constant="40" id="7bW-UA-mNy"/>
                 <constraint firstItem="Hf2-1F-zNj" firstAttribute="centerX" secondItem="891-MC-4vr" secondAttribute="centerX" id="ET2-Gs-3QN"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="75O-cb-aYe" secondAttribute="trailing" id="Ssz-84-ix8"/>
@@ -60,6 +67,7 @@
                 <constraint firstItem="891-MC-4vr" firstAttribute="centerY" secondItem="75O-cb-aYe" secondAttribute="centerY" id="pqg-87-3bX"/>
                 <constraint firstItem="75O-cb-aYe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="qmi-iD-zIP"/>
                 <constraint firstItem="or9-Xo-dgx" firstAttribute="trailing" secondItem="891-MC-4vr" secondAttribute="trailing" id="rzo-Pz-gzq"/>
+                <constraint firstItem="pHn-CI-4QB" firstAttribute="centerY" secondItem="75O-cb-aYe" secondAttribute="centerY" id="t5p-fd-1eb"/>
                 <constraint firstItem="75O-cb-aYe" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="tx6-1g-JpU"/>
                 <constraint firstItem="891-MC-4vr" firstAttribute="centerX" secondItem="75O-cb-aYe" secondAttribute="centerX" id="vtg-3J-sph"/>
                 <constraint firstItem="Hf2-1F-zNj" firstAttribute="top" secondItem="891-MC-4vr" secondAttribute="bottom" constant="60" id="zJZ-y6-4fV"/>
@@ -68,7 +76,10 @@
         </view>
     </objects>
     <resources>
-        <image name="fondo2" width="1080" height="1920"/>
+        <image name="gokuBack" width="461" height="1024"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

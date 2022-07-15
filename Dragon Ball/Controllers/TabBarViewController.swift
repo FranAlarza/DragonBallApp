@@ -14,21 +14,16 @@ class TabBarViewController: UITabBarController {
 
         // Create Instances viewcontrollers
         let charactersTable = CharactersTableViewController()
-        let charactersCollection = CharactersCollectionViewController()
+        let charactersCollection = CollectionViewController()
         // Assign view controllers to tab bar
         self.setViewControllers([charactersTable, charactersCollection], animated: false)
+        charactersTable.tabBarItem.title = "Table"
+        charactersTable.tabBarItem.image = UIImage(systemName: "list.bullet")
+        charactersCollection.tabBarItem.title = "Collection"
+        charactersCollection.tabBarItem.image = UIImage(systemName: "tablecells")
+        
         
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

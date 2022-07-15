@@ -15,6 +15,10 @@ class CharactersCollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        collection.dataSource = self
+        collection.delegate = self
+        collection.collectionViewLayout = UICollectionViewFlowLayout()
+        collection.frame = .zero
         
 
         let cellNib = UINib(nibName: "CollectionViewCell", bundle: nil)
@@ -78,4 +82,10 @@ class CharactersCollectionViewController: UICollectionViewController {
     }
     */
     
+}
+
+extension CharactersCollectionViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 100, height: 150)
+    }
 }

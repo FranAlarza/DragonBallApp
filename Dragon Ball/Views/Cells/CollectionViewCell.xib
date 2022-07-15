@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -16,14 +17,15 @@
                 <rect key="frame" x="0.0" y="0.0" width="158" height="201"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tWd-QB-JZT">
-                        <rect key="frame" x="0.0" y="0.0" width="158" height="150"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="list.bullet" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="tWd-QB-JZT">
+                        <rect key="frame" x="6" y="2.5" width="146" height="144.5"/>
+                        <color key="backgroundColor" systemColor="linkColor"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="150" id="sRL-co-4rk"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fv-bP-cTL">
-                        <rect key="frame" x="10" y="160" width="138" height="31"/>
+                        <rect key="frame" x="10" y="160" width="138" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -32,14 +34,13 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="tWd-QB-JZT" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="CfX-35-kWy"/>
+                <constraint firstItem="tWd-QB-JZT" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="6" id="CfX-35-kWy"/>
                 <constraint firstItem="tWd-QB-JZT" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="SHy-pG-iek"/>
                 <constraint firstItem="7fv-bP-cTL" firstAttribute="top" secondItem="tWd-QB-JZT" secondAttribute="bottom" constant="10" id="TJK-Nx-lcz"/>
                 <constraint firstAttribute="trailing" secondItem="7fv-bP-cTL" secondAttribute="trailing" constant="10" id="h8Y-D1-rwm"/>
-                <constraint firstAttribute="trailing" secondItem="tWd-QB-JZT" secondAttribute="trailing" id="sKZ-Of-Oct"/>
+                <constraint firstAttribute="trailing" secondItem="tWd-QB-JZT" secondAttribute="trailing" constant="6" id="sKZ-Of-Oct"/>
                 <constraint firstItem="7fv-bP-cTL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="tan-nP-j2E"/>
                 <constraint firstItem="7fv-bP-cTL" firstAttribute="centerX" secondItem="tWd-QB-JZT" secondAttribute="centerX" id="txC-2e-ifP"/>
-                <constraint firstAttribute="bottom" secondItem="7fv-bP-cTL" secondAttribute="bottom" constant="10" id="uQb-Fp-tbV"/>
                 <constraint firstItem="tWd-QB-JZT" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="xYa-rx-BBe"/>
             </constraints>
             <size key="customSize" width="158" height="201"/>
@@ -50,4 +51,10 @@
             <point key="canvasLocation" x="215.94202898550725" y="107.47767857142857"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="list.bullet" catalog="system" width="128" height="88"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

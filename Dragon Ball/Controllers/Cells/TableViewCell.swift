@@ -23,10 +23,11 @@ class TableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setDataCell(image: String, name: String, description: String){
-        characterImage.image = UIImage(named: image)
-        labelName.text = name
-        descriptionLabel.text = description
+    func setDataCell(model: Hero){
+        labelName.text = model.name
+        descriptionLabel.text = model.description
+        characterImage.downloadImage(from: model.photo)
+        
     }
         
     
