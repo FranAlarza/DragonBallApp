@@ -8,41 +8,51 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-
+    
+    var tranformations: [Transformations] = []
+    
     @IBOutlet weak var heroImage: UIImageView!
     @IBOutlet weak var heroName: UILabel!
-    @IBOutlet weak var heroDescription: UITextView!
+    @IBOutlet weak var heroDescription: UILabel!
     
+    @IBOutlet weak var transformationsButton: UIButton!
     private var hero: Hero?
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         guard let hero = hero else {
             return
         }
-        
+        self.navigationItem.leftBarButtonItem?.title = "Heroes"
+        self.title = hero.name
         heroImage.downloadImage(from: hero.photo)
         heroName.text = hero.name
         heroDescription.text = hero.description
+        
+        guard let token = LocalDataModel.getToken() else { return }
+        // Network Call
+        let networkModel = NetworkModel(token: token)
+        networkModel.getTransformations(id: hero.id) { transform, error in
+            DispatchQueue.main.async {
+                self.tranformations = transform
+                if self.tranformations.count == 0 {
+                    self.transformationsButton.isEnabled = false
+                    self.transformationsButton.alpha = 0
+                }
+                
+            }
+        }
+        
     }
-    
-    
     
     func setModel(model: Hero) {
         hero = model
     }
-
-
+    
     @IBAction func onTapButton(_ sender: Any) {
+        let nextVC = TransformViewController()
+        print("Transformations: \(tranformations.count)")
+        navigationController?.pushViewController(nextVC, animated: true)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }

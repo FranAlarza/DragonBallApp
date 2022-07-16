@@ -11,14 +11,10 @@ class CollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var characterImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
     
-    func setData(image: String, label: String) {
-        characterImage.image = UIImage(named: image)
-        nameLabel.text = label
+    func setData(model: Hero) {
+        characterImage.downloadImage(from: model.photo)
+        nameLabel.text = model.name
     }
 
 }

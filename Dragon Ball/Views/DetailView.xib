@@ -10,9 +10,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="Dragon_Ball" customModuleProvider="target">
             <connections>
-                <outlet property="heroDescription" destination="fbX-6h-cp9" id="3RD-aZ-ypm"/>
+                <outlet property="heroDescription" destination="PEQ-eU-Htk" id="EyU-a1-7bq"/>
                 <outlet property="heroImage" destination="LJs-R6-T42" id="E0t-9e-Z0I"/>
                 <outlet property="heroName" destination="2mL-sJ-zsO" id="c34-hA-cq1"/>
+                <outlet property="transformationsButton" destination="Zh2-gv-RfF" id="7i8-VB-IHl"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -33,19 +34,8 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fbX-6h-cp9">
-                    <rect key="frame" x="20" y="345.5" width="374" height="200"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="200" id="djH-vb-Mda"/>
-                    </constraints>
-                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                    <color key="textColor" systemColor="labelColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                </textView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zh2-gv-RfF">
-                    <rect key="frame" x="132" y="565.5" width="150" height="31"/>
+                <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zh2-gv-RfF">
+                    <rect key="frame" x="132" y="425.5" width="150" height="31"/>
                     <constraints>
                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="Cpf-mu-wve"/>
                     </constraints>
@@ -55,30 +45,37 @@
                         <action selector="onTapButton:" destination="-1" eventType="touchUpInside" id="pHl-uB-2fO"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEQ-eU-Htk">
+                    <rect key="frame" x="25" y="345.5" width="364" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="khW-gD-LJ1"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fbX-6h-cp9" secondAttribute="trailing" constant="20" id="5L3-l1-PV6"/>
+                <constraint firstItem="Zh2-gv-RfF" firstAttribute="centerX" secondItem="LJs-R6-T42" secondAttribute="centerX" id="Bjb-mv-4Wl"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="PEQ-eU-Htk" secondAttribute="trailing" constant="25" id="Dcr-L5-Mjw"/>
                 <constraint firstItem="LJs-R6-T42" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="E1s-8D-emQ"/>
                 <constraint firstItem="2mL-sJ-zsO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="FZc-3I-AVK"/>
-                <constraint firstItem="Zh2-gv-RfF" firstAttribute="centerX" secondItem="fbX-6h-cp9" secondAttribute="centerX" id="IWh-p3-HeJ"/>
                 <constraint firstItem="2mL-sJ-zsO" firstAttribute="top" secondItem="LJs-R6-T42" secondAttribute="bottom" constant="20" id="ImH-6c-d6w"/>
                 <constraint firstItem="LJs-R6-T42" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="P7e-wi-8dy"/>
+                <constraint firstItem="PEQ-eU-Htk" firstAttribute="top" secondItem="2mL-sJ-zsO" secondAttribute="bottom" constant="5" id="TJF-38-ZnD"/>
+                <constraint firstItem="PEQ-eU-Htk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="XjI-ZT-Wu6"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2mL-sJ-zsO" secondAttribute="trailing" constant="20" id="aiq-aD-dm2"/>
-                <constraint firstItem="fbX-6h-cp9" firstAttribute="top" secondItem="2mL-sJ-zsO" secondAttribute="bottom" constant="5" id="cMo-07-4Bt"/>
                 <constraint firstItem="LJs-R6-T42" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="eB4-ec-ueR"/>
-                <constraint firstItem="Zh2-gv-RfF" firstAttribute="top" secondItem="fbX-6h-cp9" secondAttribute="bottom" constant="20" id="mKz-hZ-CuH"/>
-                <constraint firstItem="fbX-6h-cp9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="nK8-a6-Kj1"/>
+                <constraint firstItem="Zh2-gv-RfF" firstAttribute="top" secondItem="PEQ-eU-Htk" secondAttribute="bottom" constant="40" id="fdo-Q7-TwN"/>
+                <constraint firstItem="PEQ-eU-Htk" firstAttribute="leading" secondItem="2mL-sJ-zsO" secondAttribute="leading" id="hTs-aS-slL"/>
                 <constraint firstItem="LJs-R6-T42" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="u9O-OD-Mmv"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="115.84821428571428"/>
         </view>
     </objects>
     <resources>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -11,13 +11,23 @@ private let reuseIdentifier = "Cell"
 
 class CollectionViewController: UICollectionViewController{
     
+    var heroes: [Hero] = []
     
     @IBOutlet var heroCollection: UICollectionView!
     override func viewDidLoad() {
         
         let cellNib = UINib(nibName: "CollectionViewCell", bundle: nil)
         collectionView.register(cellNib, forCellWithReuseIdentifier: "Cell")
-        // Do any additional setup after loading the view.
+        guard let token = LocalDataModel.getToken() else { return }
+        let model = NetworkModel(token: token)
+        model.getCharacter { [weak self] heroes, _ in
+            self?.heroes = heroes
+            
+            DispatchQueue.main.async {
+                self?.collectionView.reloadData()
+            }
+        }
+        
     }
     
     init() {
@@ -39,13 +49,13 @@ class CollectionViewController: UICollectionViewController{
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 20
+        return heroes.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? CollectionViewCell else { return UICollectionViewCell()}
     
-        cell.setData(image: "", label: "Goku")
+        cell.setData(model: heroes[indexPath.row])
     
         return cell
     }
@@ -54,6 +64,7 @@ class CollectionViewController: UICollectionViewController{
 
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let nextVC = DetailViewController()
+        nextVC.setModel(model: heroes[indexPath.row])
         navigationController?.pushViewController(nextVC, animated: true)
     }
    

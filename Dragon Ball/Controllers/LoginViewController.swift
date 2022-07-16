@@ -14,13 +14,21 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var loginButton: UIButton!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        if LocalDataModel.getToken() != nil {
+            let nextVC = TabBarViewController()
+            navigationController?.pushViewController(nextVC, animated: true)
+        }
+    }
+    
     @IBAction func OnButtonTap(_ sender: Any) {
-        let model = NetworkModel.shared
+        let model = NetworkModel()
         let userNameText = usernameLabel.text ?? ""
         let passwordText = passwordLabel.text ?? ""
         self.loginButton.isEnabled = false
@@ -42,6 +50,8 @@ class LoginViewController: UIViewController {
                       !token.isEmpty else {
                     return
                 }
+                
+                LocalDataModel.saveToken(token: token)
                 let nextVC = TabBarViewController()
                 self?.navigationController?.pushViewController(nextVC, animated: true)
             }

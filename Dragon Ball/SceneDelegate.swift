@@ -24,7 +24,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
         
-        navigationController.setViewControllers([LoginViewController()], animated: true)
+        if LocalDataModel.getToken() != nil {
+            navigationController.setViewControllers([TabBarViewController()], animated: true)
+        } else {
+            navigationController.setViewControllers([LoginViewController()], animated: true)
+        }
         
         self.window = window
     }

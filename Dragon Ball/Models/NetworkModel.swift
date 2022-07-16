@@ -21,7 +21,9 @@ class NetworkModel {
     
     var token: String?
     
-    static let shared = NetworkModel()
+    init(token: String? = nil) {
+        self.token = token
+    }
     
     func login(user: String, password: String,  completion: @escaping (String?, NetworkError?) -> Void) {
         guard let url = URL(string: "https://vapor2022.herokuapp.com/api/auth/login") else {
@@ -63,7 +65,6 @@ class NetworkModel {
                 return
             }
             
-            self.token = token
             completion(token, nil)
             
         }
@@ -120,6 +121,52 @@ class NetworkModel {
             completion(heroesResponse, nil)
         }
         
+        task.resume()
+    }
+    
+    func getTransformations(id: String, completion: @escaping ([Transformations], NetworkError?) -> Void) {
+        guard let url = URL(string: "https://vapor2022.herokuapp.com/api/heros/tranformations") else { return }
+        guard let token = LocalDataModel.getToken() else {
+            completion([], .tokenError)
+            return
+        }
+
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        struct BodyTrans: Encodable {
+            let id: String
+        }
+        request.httpBody = try? JSONEncoder().encode(BodyTrans(id: id))
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard  error == nil else {
+                completion([], .taskError)
+                return
+            }
+            
+            guard let httpResponse = response as? HTTPURLResponse,
+                  httpResponse.statusCode == 200 else {
+                completion([], .requestError((response as? HTTPURLResponse)?.statusCode ?? 0))
+                return
+            }
+            
+            guard let data = data else {
+                completion([], .dataError)
+                return
+            }
+            
+            guard let trasformationsResponse = try? JSONDecoder().decode([Transformations].self, from: data) else {
+                completion([], .decodingError)
+                return
+            }
+            
+            completion(trasformationsResponse, nil)
+
+
+        }
         task.resume()
     }
 }

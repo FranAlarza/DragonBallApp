@@ -8,25 +8,24 @@
 import UIKit
 
 class CharactersTableViewController: UITableViewController {
-    
-    @IBOutlet var charactersTable: UITableView!
     var heroes: [Hero] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.title = "heroes"
         let xib = UINib.init(nibName: "TableViewCell", bundle: nil)
         tableView.register(xib, forCellReuseIdentifier: "CharacterViewCell")
-        title = "Table of Heroes"
+        guard let token = LocalDataModel.getToken() else { return }
         
-        let networkModel = NetworkModel.shared
-        networkModel.getCharacter { heroes, error in
+        let networkModel = NetworkModel(token: token)
+        networkModel.getCharacter { heroes, _ in
             self.heroes = heroes
             
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
         }
+        
     }
     
     // MARK: - Table view data source
