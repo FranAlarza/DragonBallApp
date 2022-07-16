@@ -17,10 +17,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.arrow.up.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="79v-UK-uFp">
-                        <rect key="frame" x="0.0" y="0.5" width="150" height="99"/>
+                        <rect key="frame" x="0.0" y="0.5" width="150" height="94"/>
                         <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="100" id="D2Q-pi-Zgk"/>
+                            <constraint firstAttribute="height" priority="994" constant="100" id="D2Q-pi-Zgk"/>
                             <constraint firstAttribute="width" constant="150" id="I9L-NE-8bP"/>
                         </constraints>
                     </imageView>

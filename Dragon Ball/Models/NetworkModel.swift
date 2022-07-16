@@ -163,7 +163,7 @@ class NetworkModel {
                 return
             }
             
-            completion(trasformationsResponse, nil)
+            completion(trasformationsResponse.sorted { $0.name.compare($1.name, options: .numeric) == .orderedAscending }, nil)
 
 
         }

@@ -12,6 +12,9 @@ class TransformViewController: UIViewController {
     
     @IBOutlet weak var transformationsTable: UITableView!
     
+    var transformations: [Transformations] = []
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,20 +23,28 @@ class TransformViewController: UIViewController {
         view.addSubview(transformationsTable)
         transformationsTable.dataSource = self
         transformationsTable.delegate = self
+        
+        self.transformationsTable.reloadData()
     }
 
 }
 
 extension TransformViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return transformations.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = transformationsTable.dequeueReusableCell(withIdentifier: "transform", for: indexPath) as? TransformationsViewCell else { return UITableViewCell() }
-        //cell.setData(model: getTransformations[indexPath.row])
+        cell.setData(model: transformations[indexPath.row])
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let nextVC = TransformationsDetailController()
+        nextVC.setData(model: transformations[indexPath.row])
+        navigationController?.pushViewController(nextVC, animated: true)
     }
     
     

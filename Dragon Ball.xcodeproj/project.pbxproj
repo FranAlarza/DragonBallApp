@@ -28,6 +28,8 @@
 		268CADB92875C405001DA00E /* NetworkModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268CADB82875C405001DA00E /* NetworkModelTests.swift */; };
 		268CADD62875C49F001DA00E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268CADD42875C49F001DA00E /* LoginViewController.swift */; };
 		268CADD72875C49F001DA00E /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 268CADD52875C49F001DA00E /* LoginView.xib */; };
+		2690CA062882E993007154D4 /* TransformationsDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2690CA042882E993007154D4 /* TransformationsDetailController.swift */; };
+		2690CA072882E993007154D4 /* TransformationsDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2690CA052882E993007154D4 /* TransformationsDetail.xib */; };
 		269EEE502881976200CECA17 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269EEE4F2881976200CECA17 /* UIImageExtension.swift */; };
 		269EEE532881C2FE00CECA17 /* LocalDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269EEE522881C2FE00CECA17 /* LocalDataModel.swift */; };
 		269EEE562881EC1B00CECA17 /* TransformViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269EEE542881EC1B00CECA17 /* TransformViewController.swift */; };
@@ -72,6 +74,8 @@
 		268CADB82875C405001DA00E /* NetworkModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModelTests.swift; sourceTree = "<group>"; };
 		268CADD42875C49F001DA00E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		268CADD52875C49F001DA00E /* LoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
+		2690CA042882E993007154D4 /* TransformationsDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformationsDetailController.swift; sourceTree = "<group>"; };
+		2690CA052882E993007154D4 /* TransformationsDetail.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransformationsDetail.xib; sourceTree = "<group>"; };
 		269EEE4F2881976200CECA17 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		269EEE522881C2FE00CECA17 /* LocalDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataModel.swift; sourceTree = "<group>"; };
 		269EEE542881EC1B00CECA17 /* TransformViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformViewController.swift; sourceTree = "<group>"; };
@@ -182,6 +186,7 @@
 				268C888C287BA5FF00D135EA /* CollectionView.xib */,
 				26871F6B287CD469002945A0 /* DetailView.xib */,
 				269EEE552881EC1B00CECA17 /* TransformViewController.xib */,
+				2690CA052882E993007154D4 /* TransformationsDetail.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -196,6 +201,7 @@
 				268C888B287BA5FF00D135EA /* CollectionViewController.swift */,
 				26871F6A287CD469002945A0 /* DetailViewController.swift */,
 				269EEE542881EC1B00CECA17 /* TransformViewController.swift */,
+				2690CA042882E993007154D4 /* TransformationsDetailController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -290,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				268C888E287BA5FF00D135EA /* CollectionView.xib in Resources */,
+				2690CA072882E993007154D4 /* TransformationsDetail.xib in Resources */,
 				269EEE572881EC1B00CECA17 /* TransformViewController.xib in Resources */,
 				2670B1602876C89F00AD510B /* TableViewCell.xib in Resources */,
 				268CADAE2875C405001DA00E /* LaunchScreen.storyboard in Resources */,
@@ -320,6 +327,7 @@
 				269EEE5D28821B3C00CECA17 /* TransformationsModel.swift in Sources */,
 				26871F6C287CD469002945A0 /* DetailViewController.swift in Sources */,
 				2670B15F2876C89F00AD510B /* TableViewCell.swift in Sources */,
+				2690CA062882E993007154D4 /* TransformationsDetailController.swift in Sources */,
 				2688A14E287B385900DB8BD3 /* CharactersTableViewController.swift in Sources */,
 				269EEE532881C2FE00CECA17 /* LocalDataModel.swift in Sources */,
 				2688A15E287B4C9400DB8BD3 /* CollectionViewCell.swift in Sources */,

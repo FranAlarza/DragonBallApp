@@ -45,12 +45,15 @@ class DetailViewController: UIViewController {
         
     }
     
+    
+    
     func setModel(model: Hero) {
         hero = model
     }
-    
+
     @IBAction func onTapButton(_ sender: Any) {
         let nextVC = TransformViewController()
+        nextVC.transformations = tranformations
         print("Transformations: \(tranformations.count)")
         navigationController?.pushViewController(nextVC, animated: true)
     }
