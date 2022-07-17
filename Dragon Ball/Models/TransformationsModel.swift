@@ -11,24 +11,13 @@ struct TransformationsId: Decodable {
     let id: String
 }
 
-struct Transformations: Decodable, Comparable {
+struct Transformations: Decodable{
     
     let hero: TransformationsId
     let name: String
     let photo: String
     let description: String
     
-    static func < (lhs: Transformations, rhs: Transformations) -> Bool {
-        return lhs.name < rhs.name
-    }
-    
-    static func > (lhs: Transformations, rhs: Transformations) -> Bool {
-        return lhs.name > rhs.name
-    }
-    
-    static func == (lhs: Transformations, rhs: Transformations) -> Bool {
-        return lhs.name == rhs.name
-    }
 }
 
 

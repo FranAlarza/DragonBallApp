@@ -7,7 +7,7 @@
 
 import UIKit
 
-enum NetworkError: Error {
+enum NetworkError: Error, Equatable {
     case urlError
     case malformedData
     case taskError
@@ -19,9 +19,12 @@ enum NetworkError: Error {
 
 class NetworkModel {
     
+    var session: URLSession
+    
     var token: String?
     
-    init(token: String? = nil) {
+    init(urlSession: URLSession = .shared, token: String? = nil) {
+        self.session = urlSession
         self.token = token
     }
     
@@ -43,7 +46,7 @@ class NetworkModel {
         request.httpMethod = "POST"
         request.setValue("Basic \(base64DataString)", forHTTPHeaderField: "Authorization")
         
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+        let task = session.dataTask(with: request) { data, response, error in
             guard error == nil else{
                 completion(nil, .taskError)
                 return
@@ -95,7 +98,7 @@ class NetworkModel {
         let body = Body(name: name)
         request.httpBody = try? JSONEncoder().encode(body)
         
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+        let task = session.dataTask(with: request) { data, response, error in
             
             guard error == nil else{
                 completion([], .taskError)
@@ -125,8 +128,13 @@ class NetworkModel {
     }
     
     func getTransformations(id: String, completion: @escaping ([Transformations], NetworkError?) -> Void) {
-        guard let url = URL(string: "https://vapor2022.herokuapp.com/api/heros/tranformations") else { return }
-        guard let token = LocalDataModel.getToken() else {
+        guard let url = URL(string: "https://vapor2022.herokuapp.com/api/heros/tranformations") else {
+            completion([], .urlError)
+            return
+            
+        }
+        
+        guard let token = self.token else {
             completion([], .tokenError)
             return
         }
@@ -141,7 +149,7 @@ class NetworkModel {
         }
         request.httpBody = try? JSONEncoder().encode(BodyTrans(id: id))
         
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+        let task = session.dataTask(with: request) { data, response, error in
             guard  error == nil else {
                 completion([], .taskError)
                 return

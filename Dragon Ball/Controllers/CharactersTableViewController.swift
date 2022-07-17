@@ -15,6 +15,7 @@ class CharactersTableViewController: UITableViewController {
         self.title = "heroes"
         let xib = UINib.init(nibName: "TableViewCell", bundle: nil)
         tableView.register(xib, forCellReuseIdentifier: "CharacterViewCell")
+        
         guard let token = LocalDataModel.getToken() else { return }
         
         let networkModel = NetworkModel(token: token)

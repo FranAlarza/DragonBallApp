@@ -23,6 +23,7 @@ class TransformViewController: UIViewController {
         view.addSubview(transformationsTable)
         transformationsTable.dataSource = self
         transformationsTable.delegate = self
+        self.title = "Transformations"
         
         self.transformationsTable.reloadData()
     }
@@ -47,7 +48,9 @@ extension TransformViewController: UITableViewDelegate, UITableViewDataSource {
         navigationController?.pushViewController(nextVC, animated: true)
     }
     
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
     
     
 }

@@ -1,0 +1,8 @@
+[
+    {
+        "photo": "fake url",
+        "description": "fake description",
+        "name": "malformed",
+        "favorite": false,
+    }
+]

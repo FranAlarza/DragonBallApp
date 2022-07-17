@@ -14,12 +14,12 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var heroImage: UIImageView!
     @IBOutlet weak var heroName: UILabel!
     @IBOutlet weak var heroDescription: UILabel!
-    
     @IBOutlet weak var transformationsButton: UIButton!
+    
     private var hero: Hero?
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        transformationsButton.alpha = 0
         guard let hero = hero else {
             return
         }
@@ -35,9 +35,8 @@ class DetailViewController: UIViewController {
         networkModel.getTransformations(id: hero.id) { transform, error in
             DispatchQueue.main.async {
                 self.tranformations = transform
-                if self.tranformations.count == 0 {
-                    self.transformationsButton.isEnabled = false
-                    self.transformationsButton.alpha = 0
+                if self.tranformations.count > 0 {
+                    self.transformationsButton.alpha = 1
                 }
                 
             }

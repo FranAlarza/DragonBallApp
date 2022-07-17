@@ -19,7 +19,7 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iSa-Yx-Sos">
                         <rect key="frame" x="0.0" y="0.0" width="150" height="100"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="100" id="Bkj-rd-FdN"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="Bkj-rd-FdN"/>
                             <constraint firstAttribute="width" constant="150" id="jTi-CF-UN3"/>
                         </constraints>
                     </imageView>
@@ -44,6 +44,7 @@
                     <constraint firstAttribute="trailing" secondItem="IFd-85-vnd" secondAttribute="trailing" constant="20" id="D8B-7n-ogr"/>
                     <constraint firstItem="IFd-85-vnd" firstAttribute="leading" secondItem="iSa-Yx-Sos" secondAttribute="trailing" constant="10" id="P07-oh-5B7"/>
                     <constraint firstItem="iSa-Yx-Sos" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="TpV-eL-Cxd"/>
+                    <constraint firstItem="iSa-Yx-Sos" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="UZ7-2h-rla"/>
                     <constraint firstItem="Z1M-PB-K2s" firstAttribute="top" secondItem="IFd-85-vnd" secondAttribute="bottom" id="huY-9C-HiS"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Z1M-PB-K2s" secondAttribute="bottom" constant="20" id="ovj-Xz-CoX"/>
                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Z1M-PB-K2s" secondAttribute="trailing" constant="20" id="qMv-PN-xvm"/>

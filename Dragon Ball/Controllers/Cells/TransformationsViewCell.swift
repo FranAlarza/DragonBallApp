@@ -20,4 +20,6 @@ class TransformationsViewCell: UITableViewCell {
         descriptionTrans.text = model.description
     }
     
+
+    
 }

@@ -1,0 +1,9 @@
+[
+    {
+        "photo": "fake url",
+        "description": "fake description",
+        "name": "Maestro Roshi",
+        "favorite": false,
+        "id": "fake id"
+    }
+]
