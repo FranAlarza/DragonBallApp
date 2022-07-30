@@ -17,7 +17,7 @@ class TransformationsDetailController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.configureBarItems()
         transImage.downloadImage(from: transformations?.photo ?? "")
         transName.text = transformations?.name
         transDescription.text = transformations?.description

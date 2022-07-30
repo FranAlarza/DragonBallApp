@@ -8,23 +8,22 @@
 import UIKit
 
 class TabBarViewController: UITabBarController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Create Instances viewcontrollers
         let charactersTable = CharactersTableViewController()
         let charactersCollection = CollectionViewController()
         // Assign view controllers to tab bar
-        self.navigationItem.leftBarButtonItem?.isEnabled = false
-        self.setViewControllers([charactersTable, charactersCollection], animated: false)
-        self.title = "Heroes"
+        setViewControllers([charactersTable, charactersCollection], animated: false)
+        title = "Heroes"
         charactersTable.tabBarItem.title = "Table"
         charactersTable.tabBarItem.image = UIImage(systemName: "list.bullet")
         charactersCollection.tabBarItem.title = "Collection"
         charactersCollection.tabBarItem.image = UIImage(systemName: "tablecells")
+        self.configureBarItems()
         
     }
-
 
 }

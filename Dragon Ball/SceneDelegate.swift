@@ -21,11 +21,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: scene)
         let navigationController = UINavigationController()
         
+        
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
         
         if LocalDataModel.getToken() != nil {
             navigationController.setViewControllers([TabBarViewController()], animated: true)
+            //navigationController.popToViewController(LoginViewController(), animated: true)
         } else {
             navigationController.setViewControllers([LoginViewController()], animated: true)
         }

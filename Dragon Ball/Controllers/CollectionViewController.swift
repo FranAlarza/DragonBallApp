@@ -38,7 +38,6 @@ class CollectionViewController: UICollectionViewController{
         fatalError("init(coder:) has not been implemented")
     }
     
-
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {

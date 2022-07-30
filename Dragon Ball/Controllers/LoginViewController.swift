@@ -52,8 +52,9 @@ class LoginViewController: UIViewController {
                 }
                 
                 LocalDataModel.saveToken(token: token)
-                let nextVC = TabBarViewController()
-                self?.navigationController?.pushViewController(nextVC, animated: true)
+                //let nextVC = TabBarViewController()
+                self?.navigationController?.setViewControllers([TabBarViewController()], animated: true)
+                //self?.navigationController?.popViewController(animated: true)
             }
         }
         

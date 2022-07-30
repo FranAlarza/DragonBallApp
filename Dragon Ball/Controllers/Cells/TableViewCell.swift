@@ -29,6 +29,12 @@ class TableViewCell: UITableViewCell {
         characterImage.downloadImage(from: model.photo)
         
     }
+    
+    override func layoutSubviews() {
+        self.layoutIfNeeded()
+        self.layer.cornerRadius = (frame.size.width - 300) / 2
+        self.clipsToBounds = true
+    }
         
     
 }

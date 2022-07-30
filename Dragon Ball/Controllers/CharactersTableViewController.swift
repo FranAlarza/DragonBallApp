@@ -55,5 +55,9 @@ class CharactersTableViewController: UITableViewController {
         navigationController?.pushViewController(nextVC, animated: true)
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        100
+    }
+    
     
 }

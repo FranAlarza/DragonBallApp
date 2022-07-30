@@ -24,7 +24,7 @@ class TransformViewController: UIViewController {
         transformationsTable.dataSource = self
         transformationsTable.delegate = self
         self.title = "Transformations"
-        
+        self.configureBarItems()
         self.transformationsTable.reloadData()
     }
 

@@ -15,6 +15,8 @@ class CollectionViewCell: UICollectionViewCell {
     func setData(model: Hero) {
         characterImage.downloadImage(from: model.photo)
         nameLabel.text = model.name
+        characterImage.layer.cornerRadius = 8
     }
-
+    
+    
 }
